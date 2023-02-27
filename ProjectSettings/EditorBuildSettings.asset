@@ -6,16 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/WorldInteractionDemo.unity
-    guid: 3d16fc5db26e2354e9ac2a5031a52e6d
+    path: Assets/XRIExamples/Scenes/XRI_Examples_Main.unity
+    guid: ba755f5a181505a4799b21685d4c7576
   m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f3d36b094c7e90a48bfeecc8253553a0,
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: e7b6cf70c80d6634799bd6c8ea8a47ff,
       type: 2}
-    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: df8aae105e263a5468e482f51411abfe,
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: fba6072275013e6448e381f83d131b7f,
       type: 2}
-    com.unity.input.settings: {fileID: 11400000, guid: c73b900e4bace6d4db2eee9dbcce6484,
-      type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 12fb2884f45e57a48a232b374653f4dd,
-      type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 58207546bb445ae40ad9c06ed0e40937,
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: e60ad326389e9b14e9f7ae2c33703862,
       type: 2}
