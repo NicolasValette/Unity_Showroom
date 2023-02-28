@@ -397,7 +397,9 @@ MonoBehaviour:
   EnablePhysicalSize: 0
   Thumbnail: 
   HasThumbnail: 0
-  CurrentStatePreset: 
+  CurrentStatePreset: " <sbspreset pkgurl=\"pkg://StoneWall\" label=\"\" >\n  <presetinput
+    identifier=\"$outputsize\" uid=\"3783598711\" type=\"8\" value=\"10,10\" />\n
+    </sbspreset>\n"
   IsRuntimeOnly: 0
   GenerateAllOutputs: 0
   GenerateAllMipmaps: 1

@@ -225,11 +225,10 @@ MonoBehaviour:
   GenerateAllMipmaps: 1
   OutputMaterial: {fileID: 2100000, guid: 3a9b26913f331a148ad6237bb5e477d3, type: 2}
   DefaultPreset: " <sbspreset pkgurl=\"pkg://Wood_Pattern\" label=\"\" >\n  <presetinput
-    identifier=\"$outputsize\" uid=\"3856858917\" type=\"8\" value=\"10,10\" />\n
-    </sbspreset>\n"
+    identifier=\"$outputsize\" uid=\"3856858917\" type=\"8\" value=\"10,10\" />\n</sbspreset>\n"
   MaterialShader: Universal Render Pipeline/Lit
-  RenderTextures: 0
-  OutputRemaped: 0
+  RenderTextures: 1
+  OutputRemaped: 1
   references:
     version: 2
     RefIds:
