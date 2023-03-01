@@ -10,6 +10,8 @@ public class Button : MonoBehaviour
     [SerializeField]
     private XRPushButton _pushButton;
 
+    private bool _isPop = false;
+
     private void OnEnable()
     {
         _lever.onLeverActivate.AddListener(Activate);
@@ -37,6 +39,8 @@ public class Button : MonoBehaviour
     public void PopupInfo()
     {
         Debug.Log("Appear");
-        _infoPanelAnim.SetTrigger("Appear");
+
+        _infoPanelAnim.SetTrigger(_isPop?"Disappear":"Appear");
+        _isPop = !_isPop;
     }
 }
