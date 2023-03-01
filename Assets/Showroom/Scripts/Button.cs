@@ -6,6 +6,8 @@ public class Button : MonoBehaviour
     [SerializeField]
     private XRLever _lever;
     [SerializeField]
+    private Animator _infoPanelAnim;
+    [SerializeField]
     private XRPushButton _pushButton;
 
     private void OnEnable()
@@ -31,5 +33,10 @@ public class Button : MonoBehaviour
     public void Deactivate()
     {
         Debug.Log("Deactivate");
+    }
+    public void PopupInfo()
+    {
+        Debug.Log("Appear");
+        _infoPanelAnim.SetTrigger("Appear");
     }
 }
