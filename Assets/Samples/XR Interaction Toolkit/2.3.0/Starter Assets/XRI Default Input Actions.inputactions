@@ -2064,6 +2064,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Showroom Input",
+            "id": "41951086-880b-44fa-83a2-df1a1331c449",
+            "actions": [
+                {
+                    "name": "OpenMenuLeft",
+                    "type": "Button",
+                    "id": "be0988fa-973f-459e-b640-0d7bcd8ba12f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "OpenRightMenu",
+                    "type": "Button",
+                    "id": "de414873-bff7-4860-b485-cba13a34b487",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9fde29fe-321e-4d7e-ae1f-60d93c0ca74a",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenMenuLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c1cf6c88-ac9c-4f26-83fc-b9b7e6bb35a4",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenRightMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
