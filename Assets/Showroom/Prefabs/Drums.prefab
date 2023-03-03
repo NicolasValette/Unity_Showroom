@@ -1709,6 +1709,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4211551344347444825}
+  - component: {fileID: 6385939988785706373}
   m_Layer: 0
   m_Name: Drums
   m_TagString: Untagged
@@ -1734,6 +1735,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6385939988785706373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3547076251931225315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91022377f46f2f74eaadee8e47bdb98b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4120311491691428204
 GameObject:
   m_ObjectHideFlags: 0
