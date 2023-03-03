@@ -9,17 +9,19 @@ public class ArmMenuTeleport : MonoBehaviour
     [SerializeField]
     private TeleportationProvider _teleportationProvider;
 
-  
+
     public void Teleport(TeleportationAnchor destination)
     {
         Debug.Log("Teleport");
-        TeleportRequest tr;
-        tr.destinationRotation = destination.teleportAnchorTransform.rotation;
-        tr.destinationPosition = destination.teleportAnchorTransform.position;
-        tr.requestTime = 10f;
-        tr.matchOrientation = destination.matchOrientation;
+        TeleportRequest telleportRequest = new TeleportRequest()
+        {
+            destinationRotation = destination.teleportAnchorTransform.rotation,
+            destinationPosition = destination.teleportAnchorTransform.position,
+            requestTime = Time.time,
+            matchOrientation = destination.matchOrientation
+        };
 
-        _teleportationProvider.QueueTeleportRequest(tr);
+        _teleportationProvider.QueueTeleportRequest(telleportRequest);
     }
-   
+
 }
