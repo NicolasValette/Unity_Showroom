@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UILookAt : MonoBehaviour
+namespace Showroom
 {
-    [SerializeField]
-    private Transform _targetToLookAt;
-
-    // Update is called once per frame
-    void Update()
+    public class UILookAt : MonoBehaviour
     {
-        transform.LookAt(_targetToLookAt);
+        [SerializeField]
+        private Transform _targetToLookAt;
+
+        // Update is called once per frame
+        void Update()
+        {
+            transform.LookAt(_targetToLookAt);
+        }
     }
 }

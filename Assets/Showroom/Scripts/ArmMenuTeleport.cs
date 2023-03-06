@@ -3,25 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class ArmMenuTeleport : MonoBehaviour
+namespace Showroom
 {
-    [Space]
-    [SerializeField]
-    private TeleportationProvider _teleportationProvider;
-
-
-    public void Teleport(TeleportationAnchor destination)
+    public class ArmMenuTeleport : MonoBehaviour
     {
-        Debug.Log("Teleport");
-        TeleportRequest telleportRequest = new TeleportRequest()
+        [Space]
+        [SerializeField]
+        private TeleportationProvider _teleportationProvider;
+
+
+        public void Teleport(TeleportationAnchor destination)
         {
-            destinationRotation = destination.teleportAnchorTransform.rotation,
-            destinationPosition = destination.teleportAnchorTransform.position,
-            requestTime = Time.time,
-            matchOrientation = destination.matchOrientation
-        };
+            Debug.Log("Teleport");
+            TeleportRequest telleportRequest = new TeleportRequest()
+            {
+                destinationRotation = destination.teleportAnchorTransform.rotation,
+                destinationPosition = destination.teleportAnchorTransform.position,
+                requestTime = Time.time,
+                matchOrientation = destination.matchOrientation
+            };
 
-        _teleportationProvider.QueueTeleportRequest(telleportRequest);
+            _teleportationProvider.QueueTeleportRequest(telleportRequest);
+        }
     }
-
 }

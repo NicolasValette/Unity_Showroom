@@ -4,72 +4,75 @@ using UnityEngine.XR.Content.Interaction;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.OpenXR.Input;
 
-public class Button : MonoBehaviour
+namespace Showroom
 {
-    [SerializeField]
-    private XRLever _lever;
-    [SerializeField]
-    private Animator _infoPanelAnim;
-    [SerializeField]
-    private XRPushButton _pushButton;
-    [SerializeField]
-    private VideoPlayer _videoPlayer;
-    [SerializeField]
-    private TeleportationAnchor _teleportationAnchor;
-    [SerializeField]
-    private TeleportationProvider _teleportationProvider;
-
-    private bool _isPop = false;
-
-    private void OnEnable()
+    public class Button : MonoBehaviour
     {
-        _lever.onLeverActivate.AddListener(Activate);
-        _lever.onLeverActivate.AddListener(Teleport);
-        _lever.onLeverDeactivate.AddListener(Deactivate);
+        [SerializeField]
+        private XRLever _lever;
+        [SerializeField]
+        private Animator _infoPanelAnim;
+        [SerializeField]
+        private XRPushButton _pushButton;
+        [SerializeField]
+        private VideoPlayer _videoPlayer;
+        [SerializeField]
+        private TeleportationAnchor _teleportationAnchor;
+        [SerializeField]
+        private TeleportationProvider _teleportationProvider;
 
-        _pushButton.onPress.AddListener(Activate);
-        _pushButton.onRelease.AddListener(Deactivate);
-    }
-    private void OnDisable()
-    {
-        _lever.onLeverActivate.RemoveListener(Activate);
-        _lever.onLeverActivate.RemoveListener(Teleport);
-        _lever.onLeverDeactivate.RemoveListener(Deactivate);
+        private bool _isPop = false;
 
-        _pushButton.onPress.RemoveListener(Activate);
-        _pushButton.onRelease.RemoveListener(Deactivate);
-    }
-    public void Activate()
-    {
-        Debug.Log("Activate");
-    }
-    public void Deactivate()
-    {
-        Debug.Log("Deactivate");
-    }
-    public void PopupInfo()
-    {
-        Debug.Log("Appear");
+        private void OnEnable()
+        {
+            _lever.onLeverActivate.AddListener(Activate);
+            _lever.onLeverActivate.AddListener(Teleport);
+            _lever.onLeverDeactivate.AddListener(Deactivate);
 
-        _infoPanelAnim.SetTrigger(_isPop ? "Disappear" : "Appear");
-        _isPop = !_isPop;
-    }
-    public void Play()
-    {
-        Debug.Log("Play");
-        _videoPlayer.Play();
-    }
+            _pushButton.onPress.AddListener(Activate);
+            _pushButton.onRelease.AddListener(Deactivate);
+        }
+        private void OnDisable()
+        {
+            _lever.onLeverActivate.RemoveListener(Activate);
+            _lever.onLeverActivate.RemoveListener(Teleport);
+            _lever.onLeverDeactivate.RemoveListener(Deactivate);
 
-    public void Teleport()
-    {
-        Debug.Log("TP");
-        TeleportRequest tr;
-        tr.destinationRotation= _teleportationAnchor.teleportAnchorTransform.rotation; 
-        tr.destinationPosition = _teleportationAnchor.teleportAnchorTransform.position;
-        tr.requestTime = 10f;
-        tr.matchOrientation = _teleportationAnchor.matchOrientation;
+            _pushButton.onPress.RemoveListener(Activate);
+            _pushButton.onRelease.RemoveListener(Deactivate);
+        }
+        public void Activate()
+        {
+            Debug.Log("Activate");
+        }
+        public void Deactivate()
+        {
+            Debug.Log("Deactivate");
+        }
+        public void PopupInfo()
+        {
+            Debug.Log("Appear");
 
-        _teleportationProvider.QueueTeleportRequest(tr);
-        
+            _infoPanelAnim.SetTrigger(_isPop ? "Disappear" : "Appear");
+            _isPop = !_isPop;
+        }
+        public void Play()
+        {
+            Debug.Log("Play");
+            _videoPlayer.Play();
+        }
+
+        public void Teleport()
+        {
+            Debug.Log("TP");
+            TeleportRequest tr;
+            tr.destinationRotation = _teleportationAnchor.teleportAnchorTransform.rotation;
+            tr.destinationPosition = _teleportationAnchor.teleportAnchorTransform.position;
+            tr.requestTime = 10f;
+            tr.matchOrientation = _teleportationAnchor.matchOrientation;
+
+            _teleportationProvider.QueueTeleportRequest(tr);
+
+        }
     }
 }
