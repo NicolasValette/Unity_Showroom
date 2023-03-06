@@ -5343,6 +5343,7 @@ MonoBehaviour:
   _timeBeforeRepair: 4
   _repairCube: {fileID: 5747385480845025933}
   _brokenCube: {fileID: 945615570265659702}
+  _collider: {fileID: 4922068430640861418}
 --- !u!82 &4870235425037860549
 AudioSource:
   m_ObjectHideFlags: 0

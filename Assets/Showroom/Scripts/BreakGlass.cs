@@ -16,6 +16,8 @@ namespace Showroom
         private GameObject _repairCube;
         [SerializeField]
         private GameObject _brokenCube;
+        [SerializeField]
+        private Collider _collider;
 
         private bool _isBreakable = true;
 
@@ -48,6 +50,7 @@ namespace Showroom
         {
             Debug.Log("Toggle");
             _isBreakable = !_isBreakable;
+            _collider.enabled = !_collider.enabled;
             _repairCube.SetActive(!_repairCube.activeSelf);
             _brokenCube.SetActive(!_brokenCube.activeSelf);
         }
